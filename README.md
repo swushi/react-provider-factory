@@ -20,7 +20,7 @@ $ yarn add react-provider-factory
 
 ## Usage
 
-#### providers/theme.ts
+`providers/theme.ts`
 Generate the provider and hook in a separate, shared file, then export.
 ```ts
 import createProvider from "react-provider-factory";
@@ -32,7 +32,7 @@ const [useTheme, ThemeProvider] = createProvider<'light' | 'dark'>('light');
 export { useTheme, ThemeProvider };
 ```
 
-#### index.ts
+`index.ts`
 Import Provider where you want the data to be rooted from. (Typically `index.ts` if global)
 ```tsx
 import { ThemeProvider } from '../providers/theme.ts';
@@ -48,7 +48,7 @@ const App = () => {
 }
 ```
 
-#### YourComponent.tsx
+`YourComponent.tsx`
 Import hook where needed to access and mutate data. (Works the exact same way as `useState`)
 ```tsx
 import { useTheme } from '../providers/theme.ts';
