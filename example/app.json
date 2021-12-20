@@ -1,0 +1,22 @@
+{
+  "name": "react-provider-factory-example",
+  "displayName": "ReactProviderFactory Example",
+  "expo": {
+    "name": "react-provider-factory-example",
+    "slug": "react-provider-factory-example",
+    "description": "Example app for react-provider-factory",
+    "privacy": "public",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
