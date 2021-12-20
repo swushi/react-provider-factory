@@ -2,10 +2,20 @@
 
 A simple and normalized React Provider generator using the React Context API.
 
+The goal of this library is to deliver a similar interface as React's `useState`, but on a contextual level. This will help alleviate common issues such as large state machines and especially prop drilling. 
+
+Imagine this scenario: You have a `User` component, which holds state. This user component has a `UserDetails` component which has a `UserAvatar` and `UserBio` component. Both of these component need all of the state from the `User` component. You now have to drill your props through for the data, not to mention callbacks as well to mutate that data. You can imagine how this can get out of hand quickly. 
+
+Now, instead of prop drilling, you could wrap `User` in a `UserProvider` that any children can consume. With that Context, the data can be easily mutated as well. 
+
+Common misconception: Any component in the hierarchy of `User` that does not use the hook to consume the data will not re-render any time the data is updated. 
+
 ## Installation
 
 ```sh
 npm install react-provider-factory
+// or
+yarn add react-provider-factory
 ```
 
 ## Usage
