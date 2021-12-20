@@ -6,9 +6,9 @@ The goal of this library is to deliver a similar interface as React's `useState`
 
 Imagine this scenario: You have a `User` component, which holds state. This user component has a `UserDetails` component which has a `UserAvatar` and `UserBio` component. Both of these component need all of the state from the `User` component. You now have to drill your props through for the data, not to mention callbacks as well to mutate that data. You can imagine how this can get out of hand quickly. 
 
-Now, instead of prop drilling, you could wrap `User` in a `UserProvider` that any children can consume. With that Context, the data can be easily mutated as well. 
+Now, instead of prop drilling, you could wrap `User` in a `UserProvider`, and use the convenient `useUser` hook anywhere you want to access or mutate the user data. 
 
-Common misconception: Any component in the hierarchy of `User` that does not use the hook to consume the data will not re-render any time the data is updated. 
+Common misconception: Any component in the hierarchy of `User` that does not use the `useUser` hook will not re-render.
 
 ## Installation
 
