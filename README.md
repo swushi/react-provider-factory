@@ -13,9 +13,9 @@ Common misconception: Any component in the hierarchy of `User` that does not use
 ## Installation
 
 ```sh
-npm install react-provider-factory
-// or
-yarn add react-provider-factory
+$ npm install react-provider-factory
+# or
+$ yarn add react-provider-factory
 ```
 
 ## Usage
